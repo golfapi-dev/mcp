@@ -1,0 +1,43 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "golfapi",
+  "version": "1.0.0",
+  "description": "Golf club specifications as each maker published them: drivers to putters, lofts, lies, hands, release years and launch prices.",
+  "author": {
+    "name": "GolfAPI.dev",
+    "email": "hello@golfapi.dev",
+    "url": "https://golfapi.dev"
+  },
+  "homepage": "https://golfapi.dev/mcp",
+  "license": "MIT",
+  "keywords": [
+    "golf",
+    "golf clubs",
+    "specifications",
+    "drivers",
+    "irons",
+    "putters"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "GolfAPI.dev",
+        "shortDescription": "Golf club specs from makers",
+        "longDescription": "GolfAPI.dev is a read-only catalog of golf club specifications as each maker published them: lofts, lies, head volume, hands, adjustable hosels, release dates and US launch prices for 2.7k+ club models released 2000 to 2026, across drivers, mini-drivers, fairway woods, hybrids, irons, wedges and putters. A field the maker did not publish is left out rather than guessed.\n\nSix tools: describe_api, search_clubs, get_club, get_coverage, get_changes and api_get. Every tool is a read. Each call is one request on your GolfAPI.dev plan.\n\nConnecting asks for a GolfAPI.dev API key once. A free key reads a fixed sample of 20 drivers from 10 makers released in 2025, plus 2 mini-drivers and 2 fairway woods, specifications only. A Hobby key reads all seven club types. A Pro key adds US launch prices and allows commercial use.",
+        "category": "Sports",
+        "websiteURL": "https://golfapi.dev/mcp",
+        "supportURL": "https://golfapi.dev/contact/",
+        "privacyPolicyURL": "https://golfapi.dev/privacy/",
+        "termsOfServiceURL": "https://golfapi.dev/terms/",
+        "defaultPrompt": [
+          "Which 2025 drivers come in 10.5 degrees left-handed?",
+          "Compare the PING G440 Max and G440 SFT drivers.",
+          "List every 2026 Callaway driver with its US launch price."
+        ],
+        "brandColor": "#0B5A3E",
+        "logo": "./assets/logo.png",
+        "composerIcon": "./assets/logo.png"
+      }
+    }
+  }
+}
